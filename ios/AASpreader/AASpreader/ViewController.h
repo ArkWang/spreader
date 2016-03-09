@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  spreader
+//  AASpreader
 //
 //  Created by yd on 2016/3/9.
 //  Copyright © 2016年 airyLiu. All rights reserved.
