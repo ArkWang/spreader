@@ -44,6 +44,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78AF40741C917DBF0071250A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		78AF40751C917DBF0071250A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		78AF40761C917DBF0071250A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		78AF40771C917DBF0071250A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		78B7BB6A1C8FF8A10079BF4C = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +93,10 @@
 		78B7BB751C8FF8A10079BF4C /* AASpreader */ = {
 			isa = PBXGroup;
 			children = (
+				78AF40741C917DBF0071250A /* Controllers */,
+				78AF40751C917DBF0071250A /* Managers */,
+				78AF40761C917DBF0071250A /* Models */,
+				78AF40771C917DBF0071250A /* Views */,
 				78B7BB791C8FF8A10079BF4C /* AppDelegate.h */,
 				78B7BB7A1C8FF8A10079BF4C /* AppDelegate.m */,
 				78B7BB7C1C8FF8A10079BF4C /* ViewController.h */,
@@ -288,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -326,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
