@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7864703B1C93D5F700D7A108 /* AALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7864703A1C93D5F700D7A108 /* AALoginViewController.m */; };
+		7864703E1C93D60600D7A108 /* AARegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7864703D1C93D60600D7A108 /* AARegisterViewController.m */; };
+		7864705E1C93ECB900D7A108 /* AARequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7864705D1C93ECB900D7A108 /* AARequest.m */; };
 		78B7BB781C8FF8A10079BF4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B7BB771C8FF8A10079BF4C /* main.m */; };
 		78B7BB7B1C8FF8A10079BF4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B7BB7A1C8FF8A10079BF4C /* AppDelegate.m */; };
 		78B7BB7E1C8FF8A10079BF4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B7BB7D1C8FF8A10079BF4C /* ViewController.m */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		786470391C93D5F700D7A108 /* AALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AALoginViewController.h; sourceTree = "<group>"; };
+		7864703A1C93D5F700D7A108 /* AALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AALoginViewController.m; sourceTree = "<group>"; };
+		7864703C1C93D60600D7A108 /* AARegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AARegisterViewController.h; sourceTree = "<group>"; };
+		7864703D1C93D60600D7A108 /* AARegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AARegisterViewController.m; sourceTree = "<group>"; };
+		7864705C1C93ECB900D7A108 /* AARequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AARequest.h; sourceTree = "<group>"; };
+		7864705D1C93ECB900D7A108 /* AARequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AARequest.m; sourceTree = "<group>"; };
 		78B3F57C72D78CD90FFFF4D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		78B7BB731C8FF8A10079BF4C /* AASpreader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AASpreader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78B7BB771C8FF8A10079BF4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,9 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7864703F1C93E27D00D7A108 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7864705C1C93ECB900D7A108 /* AARequest.h */,
+				7864705D1C93ECB900D7A108 /* AARequest.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		78AF40741C917DBF0071250A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				786470391C93D5F700D7A108 /* AALoginViewController.h */,
+				7864703A1C93D5F700D7A108 /* AALoginViewController.m */,
+				7864703C1C93D60600D7A108 /* AARegisterViewController.h */,
+				7864703D1C93D60600D7A108 /* AARegisterViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -93,6 +115,7 @@
 		78B7BB751C8FF8A10079BF4C /* AASpreader */ = {
 			isa = PBXGroup;
 			children = (
+				7864703F1C93E27D00D7A108 /* Networking */,
 				78AF40741C917DBF0071250A /* Controllers */,
 				78AF40751C917DBF0071250A /* Managers */,
 				78AF40761C917DBF0071250A /* Models */,
@@ -256,7 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7864703B1C93D5F700D7A108 /* AALoginViewController.m in Sources */,
+				7864703E1C93D60600D7A108 /* AARegisterViewController.m in Sources */,
 				78B7BB7E1C8FF8A10079BF4C /* ViewController.m in Sources */,
+				7864705E1C93ECB900D7A108 /* AARequest.m in Sources */,
 				78B7BB7B1C8FF8A10079BF4C /* AppDelegate.m in Sources */,
 				78B7BB781C8FF8A10079BF4C /* main.m in Sources */,
 			);
