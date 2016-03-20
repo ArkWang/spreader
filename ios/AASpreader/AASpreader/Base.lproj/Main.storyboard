@@ -644,7 +644,18 @@
                             <constraint firstItem="KQN-eJ-CaW" firstAttribute="top" secondItem="QEq-Kw-lnN" secondAttribute="bottom" id="ygw-dv-irH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Spreader" id="8MN-cO-Iux"/>
+                    <navigationItem key="navigationItem" title="Spreader" id="8MN-cO-Iux">
+                        <barButtonItem key="rightBarButtonItem" title="refresh" style="plain" id="Yzb-lf-Xpq">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ix8-r3-6Tq">
+                                <rect key="frame" x="530" y="7" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="refresh"/>
+                                <connections>
+                                    <action selector="doTestRequest:" destination="2nF-Iu-gWR" eventType="touchUpInside" id="0Dq-uF-BlF"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSL-dB-ChP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,8 +10,11 @@
 
 @interface AARequest : NSObject
 
-- (void)get:(NSString *)urlPath parameters:(NSDictionary *)params completion:(void (^)(id result, NSError *error))completion;
+// singletion
++ (instancetype)sharedInstance;
 
-- (void)post:(NSString *)urlPath parameters:(NSDictionary *)params completion:(void (^)(id result, NSError *error))completion;
+- (NSURLSessionDataTask *)get:(NSString *)urlPath parameters:(NSDictionary *)params completion:(void (^)(id result, NSError *error))completion;
+
+- (NSURLSessionDataTask *)post:(NSString *)urlPath parameters:(NSDictionary *)params completion:(void (^)(id result, NSError *error))completion;
 
 @end
