@@ -51,9 +51,13 @@ static NSString *const kAACurrentUser = @"currentuser";
 
 - (void)setCurrentUser:(AAUser *)currentUser
 {
+    if ([_currentUser isEqual:currentUser]) {
+        return;
+    }
     // save to local and update current instance
     if ([self saveCurrentUser:currentUser]) {
         _currentUser = currentUser;
+        [[NSNotificationCenter defaultCenter] postNotificationName:kAAUserDidChangeNotification object:nil];
     }
 }
 

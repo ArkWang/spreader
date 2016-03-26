@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "AAUser.h"
 
+static NSString *const kAAUserDidChangeNotification = @"kAAUserDidChangeNotification";
+
 @interface AAProfileManager : NSObject
 
-@property (nonatomic, readonly, strong) AAUser *currentUser;
+@property (nonatomic, strong) AAUser *currentUser;
 
 + (instancetype)sharedProfileManager;
 

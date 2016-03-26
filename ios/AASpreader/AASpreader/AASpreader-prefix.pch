@@ -19,4 +19,8 @@
 #import "AAApi.h"
 #import "AARequest.h"
 
+// user
+#import "AAProfileManager.h"
+
+
 #endif /* AASpreader_prefix_pch */
