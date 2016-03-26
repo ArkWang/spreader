@@ -42,10 +42,26 @@
             </objects>
             <point key="canvasLocation" x="286" y="741"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7vk-0Y-8t5">
+            <objects>
+                <navigationController id="J8b-As-9AB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tBH-u3-wZE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="93s-JR-Kl9" kind="relationship" relationship="rootViewController" id="p7A-fl-84h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7U-b7-mmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="286" y="1431"/>
+        </scene>
         <!--login-->
         <scene sceneID="g62-eF-ydO">
             <objects>
-                <viewController title="login" id="93s-JR-Kl9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="kSBLogin" title="login" id="93s-JR-Kl9" customClass="AALoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RNY-3Y-I7n"/>
                         <viewControllerLayoutGuide type="bottom" id="Ndb-Y6-Hze"/>
@@ -55,7 +71,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOp-Ax-HWJ">
-                                <rect key="frame" x="0.0" y="158" width="600" height="88"/>
+                                <rect key="frame" x="0.0" y="202" width="600" height="88"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_feedback" translatesAutoresizingMaskIntoConstraints="NO" id="pju-nT-8pw">
                                         <rect key="frame" x="15" y="7" width="30" height="30"/>
@@ -142,7 +158,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHK-I0-Vwo">
-                                <rect key="frame" x="505" y="254" width="80" height="30"/>
+                                <rect key="frame" x="505" y="298" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="2cG-37-EIn"/>
                                     <constraint firstAttribute="height" constant="30" id="YyC-mk-k88"/>
@@ -153,7 +169,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c05-Is-fpR">
-                                <rect key="frame" x="445" y="340" width="140" height="30"/>
+                                <rect key="frame" x="445" y="384" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LWE-tC-DgY"/>
                                     <constraint firstAttribute="width" constant="140" id="uoo-ea-1FV"/>
@@ -162,9 +178,12 @@
                                 <state key="normal" title="没有账号，立即注册">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eOO-Z7-wUY" kind="show" identifier="kSegueLoginShowRegister" id="SwF-kQ-Ev1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQP-cf-OCf">
-                                <rect key="frame" x="15" y="292" width="570" height="40"/>
+                                <rect key="frame" x="15" y="336" width="570" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="vLP-GU-Qrs"/>
@@ -173,7 +192,7 @@
                                 <state key="normal" title="登陆"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spreader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-rj-Qfg">
-                                <rect key="frame" x="200" y="57" width="200" height="56"/>
+                                <rect key="frame" x="200" y="101" width="200" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Iw6-vO-OfL"/>
                                     <constraint firstAttribute="width" constant="200" id="NUx-oj-zxn"/>
@@ -207,15 +226,18 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="z9x-Yv-OXn">
+                        <barButtonItem key="rightBarButtonItem" title="cancel" style="plain" id="3xs-Or-xf4"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HA-a2-iYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="1435"/>
+            <point key="canvasLocation" x="964" y="1431"/>
         </scene>
         <!--register-->
         <scene sceneID="9Xb-s0-X8g">
             <objects>
-                <viewController title="register" id="eOO-Z7-wUY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="kSBRegister" title="register" id="eOO-Z7-wUY" customClass="AARegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RmA-8b-U5x"/>
                         <viewControllerLayoutGuide type="bottom" id="4Pc-bL-Yx2"/>
@@ -426,6 +448,9 @@
                                 <state key="normal" title="已有账号，立即登陆">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="93s-JR-Kl9" kind="show" identifier="kSegueRegisterShowLogin" id="gbT-D9-ePg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -453,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUe-6l-Rvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="2115"/>
+            <point key="canvasLocation" x="964" y="2111"/>
         </scene>
         <!--friends-->
         <scene sceneID="tjK-cT-FVa">
@@ -1030,7 +1055,7 @@
         <!--我-->
         <scene sceneID="iuM-IG-0I5">
             <objects>
-                <viewController id="Sv7-RT-RVO" sceneMemberID="viewController">
+                <viewController id="Sv7-RT-RVO" customClass="AAMeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NHV-ND-Dd2"/>
                         <viewControllerLayoutGuide type="bottom" id="Jf7-go-Zgo"/>
@@ -1156,7 +1181,13 @@
                             <constraint firstItem="Ftw-47-yLe" firstAttribute="leading" secondItem="6gv-SA-t6v" secondAttribute="leading" id="niF-UC-pQB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="我" id="3UO-Rp-T80"/>
+                    <navigationItem key="navigationItem" title="我" id="3UO-Rp-T80">
+                        <barButtonItem key="rightBarButtonItem" title="login" style="plain" id="8Dc-cw-ivn">
+                            <connections>
+                                <segue destination="J8b-As-9AB" kind="presentation" identifier="kSegueShowLogin" id="FbI-Gd-hSg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u19-iB-CqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1167,4 +1198,7 @@
         <image name="profile_feedback" width="22" height="22"/>
         <image name="right_errow" width="7" height="12"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="p7A-fl-84h"/>
+    </inferredMetricsTieBreakers>
 </document>

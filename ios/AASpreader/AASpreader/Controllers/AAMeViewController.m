@@ -1,18 +1,18 @@
 //
-//  AALoginViewController.m
+//  AAMeViewController.m
 //  AASpreader
 //
-//  Created by yd on 2016/3/12.
+//  Created by yd on 2016/3/20.
 //  Copyright © 2016年 airyLiu. All rights reserved.
 //
 
-#import "AALoginViewController.h"
+#import "AAMeViewController.h"
 
-@interface AALoginViewController ()
+@interface AAMeViewController ()
 
 @end
 
-@implementation AALoginViewController
+@implementation AAMeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,26 +33,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)loginButtonClicked:(UIButton *)sender
-{
-    // check input
-    // build request
-}
-
-- (BOOL)checkInput
-{
-    NSString *mobile = @"1801101110";
-    NSString *password = @"123456";
-    if (mobile.length <= 0) {
-        
-    }
-    return YES;
-}
-
-- (void)requestLogin
-{
-    
-}
 
 @end

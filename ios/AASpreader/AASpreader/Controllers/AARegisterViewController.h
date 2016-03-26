@@ -6,8 +6,8 @@
 //  Copyright © 2016年 airyLiu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AABaseViewController.h"
 
-@interface AARegisterViewController : UIViewController
+@interface AARegisterViewController : AABaseViewController
 
 @end

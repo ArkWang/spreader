@@ -1,0 +1,22 @@
+//
+//  AASpreader-prefix.pch
+//  AASpreader
+//
+//  Created by yd on 2016/3/20.
+//  Copyright © 2016年 airyLiu. All rights reserved.
+//
+
+#ifndef AASpreader_prefix_pch
+#define AASpreader_prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// base functions
+#import "YYKit.h"
+
+// request
+#import "AAApi.h"
+#import "AARequest.h"
+
+#endif /* AASpreader_prefix_pch */

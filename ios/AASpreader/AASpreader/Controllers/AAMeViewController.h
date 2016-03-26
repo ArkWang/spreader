@@ -1,13 +1,13 @@
 //
-//  AALoginViewController.h
+//  AAMeViewController.h
 //  AASpreader
 //
-//  Created by yd on 2016/3/12.
+//  Created by yd on 2016/3/20.
 //  Copyright © 2016年 airyLiu. All rights reserved.
 //
 
 #import "AABaseViewController.h"
 
-@interface AALoginViewController : AABaseViewController
+@interface AAMeViewController : AABaseViewController
 
 @end

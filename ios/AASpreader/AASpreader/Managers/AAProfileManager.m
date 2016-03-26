@@ -1,0 +1,74 @@
+//
+//  AAProfileManager.m
+//  AASpreader
+//
+//  Created by yd on 2016/3/20.
+//  Copyright © 2016年 airyLiu. All rights reserved.
+//
+
+#import "AAProfileManager.h"
+
+static NSString *const kAAProfilePath = @"aaprofile";
+static NSString *const kAACurrentUser = @"currentuser";
+
+@interface AAProfileManager()
+
+@property (nonatomic, strong) YYKVStorage *storeManager;
+
+@end
+
+@implementation AAProfileManager
+
++ (instancetype)sharedProfileManager
+{
+    static id _sharedProfileManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedProfileManager = [[[self class] alloc] init];
+    });
+    return _sharedProfileManager;
+}
+
++ (NSString *)profilePath
+{
+    NSString *basePath = [UIApplication sharedApplication].documentsPath;
+    NSString *profilePath = [basePath stringByAppendingPathComponent:kAAProfilePath];
+    return profilePath;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        // set store manager
+        YYKVStorage *storeManager = [[YYKVStorage alloc] initWithPath:[[self class] profilePath] type:YYKVStorageTypeMixed];
+        _storeManager = storeManager;
+        // set current user
+        _currentUser = [self savedCurrentUser];
+    }
+    return self;
+}
+
+- (void)setCurrentUser:(AAUser *)currentUser
+{
+    // save to local and update current instance
+    if ([self saveCurrentUser:currentUser]) {
+        _currentUser = currentUser;
+    }
+}
+
+- (AAUser *)savedCurrentUser
+{
+    NSData *userData = [self.storeManager getItemValueForKey:kAACurrentUser];
+    AAUser *user = [AAUser modelWithJSON:[userData utf8String]];
+    return user;
+}
+
+- (BOOL)saveCurrentUser:(AAUser *)user
+{
+    NSString *userJson = [user modelToJSONString];
+    NSData *userData = [userJson dataValue];
+    return [self.storeManager saveItemWithKey:kAACurrentUser value:userData];
+}
+
+@end

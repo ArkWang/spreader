@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "AARequest.h"
 
 @interface ViewController ()
 
