@@ -34,6 +34,7 @@
 }
 */
 
+#pragma mark - custom setting
 - (void)customizeNavigationBar
 {
     if (self.navigationController) {
@@ -49,6 +50,48 @@
 - (void)setNavigationTitle:(NSString *)title
 {
     self.navigationItem.title = title;
+}
+
+- (UIBarButtonItem *)barButtonItem:(UIImage *)image title:(NSString *)title actionBlock:(void (^)(id sender))block
+{
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] init];
+    barButtonItem.image = image;
+    barButtonItem.title = title;
+    barButtonItem.actionBlock = block;
+    return barButtonItem;
+}
+
+- (void)setLeftBarButtonItem:(UIImage *)image title:(NSString *)title actionBlock:(void (^)(id sender))block
+{
+    UIBarButtonItem *barButtonItem = [self barButtonItem:image title:title actionBlock:block];
+    if (!barButtonItem.actionBlock) {
+        [barButtonItem setTarget:self];
+        [barButtonItem setAction:@selector(dismissSelf:)];
+    }
+    self.navigationItem.leftBarButtonItem = barButtonItem;
+}
+
+- (void)setRightBarButtonItem:(UIImage *)image title:(NSString *)title actionBlock:(void (^)(id sender))block
+{
+    UIBarButtonItem *barButtonItem = [self barButtonItem:image title:title actionBlock:block];
+    self.navigationItem.rightBarButtonItem = barButtonItem;
+}
+
+
+#pragma mark - dismiss
+- (void)dismissKeyboard
+{
+    [self setEditing:NO];
+}
+
+- (IBAction)dismissSelf:(id)sender
+{
+    // dismiss self or pop
+    if (self.presentingViewController) {
+        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 @end

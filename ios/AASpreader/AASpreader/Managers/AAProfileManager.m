@@ -76,3 +76,32 @@ static NSString *const kAACurrentUser = @"currentuser";
 }
 
 @end
+
+
+
+@implementation AAProfileManager(Verify)
+
++ (NSString *)checkMobile:(NSString *)mobile
+{
+    if (mobile.length <= 0) {
+        return @"手机号不能为空";
+    }
+    return nil;
+}
+
++ (NSString *)checkPassword:(NSString *)password
+{
+    if (password.length <= 0) {
+        return @"密码不能为空";
+    } else if (password.length < 6) {
+        return @"密码至少为6位";
+    }
+    return nil;
+}
+
++ (NSString *)encodedPassword:(NSString *)password
+{
+    return [password md5String];
+}
+
+@end

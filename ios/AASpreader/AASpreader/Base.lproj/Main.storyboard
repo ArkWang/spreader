@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WNE-Ky-ixO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WNE-Ky-ixO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -95,6 +95,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="93s-JR-Kl9" id="b4G-2Z-j8K"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qmw-iq-hg0">
                                         <rect key="frame" x="60" y="44" width="525" height="44"/>
@@ -104,6 +107,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="93s-JR-Kl9" id="6AW-jw-Bwi"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYv-aF-bxF">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
@@ -190,6 +196,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="登陆"/>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="93s-JR-Kl9" eventType="touchUpInside" id="9k8-9B-vkh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spreader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-rj-Qfg">
                                 <rect key="frame" x="200" y="101" width="200" height="56"/>
@@ -221,14 +230,19 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="tgJ-bc-pba"/>
                                 <exclude reference="DAv-31-a2L"/>
+                                <exclude reference="tgJ-bc-pba"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="z9x-Yv-OXn">
                         <barButtonItem key="rightBarButtonItem" title="cancel" style="plain" id="3xs-Or-xf4"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loginButton" destination="IQP-cf-OCf" id="qed-Ao-XqE"/>
+                        <outlet property="mobileTextField" destination="nzj-ak-YW9" id="kfD-bC-cJB"/>
+                        <outlet property="passwordTextField" destination="qmw-iq-hg0" id="VFm-2F-21e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HA-a2-iYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,7 +260,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spreader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="v2U-se-kMJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Spreader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="v2U-se-kMJ">
                                 <rect key="frame" x="200" y="81" width="200" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Jcf-Xu-Wm5"/>
@@ -256,7 +270,7 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7T-r8-zb5">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7T-r8-zb5">
                                 <rect key="frame" x="0.0" y="182" width="600" height="176"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_feedback" translatesAutoresizingMaskIntoConstraints="NO" id="o7x-0k-H8u">
@@ -429,7 +443,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-Wg-SGt">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-Wg-SGt">
                                 <rect key="frame" x="15" y="383" width="570" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -438,7 +452,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="注册"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsK-iU-7o8">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsK-iU-7o8">
                                 <rect key="frame" x="445" y="431" width="140" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rOZ-LX-hyw"/>
@@ -1199,6 +1213,6 @@
         <image name="right_errow" width="7" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p7A-fl-84h"/>
+        <segue reference="gbT-D9-ePg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -20,6 +20,14 @@
 		78B7BB811C8FF8A10079BF4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B7BB7F1C8FF8A10079BF4C /* Main.storyboard */; };
 		78B7BB831C8FF8A10079BF4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78B7BB821C8FF8A10079BF4C /* Assets.xcassets */; };
 		78B7BB861C8FF8A10079BF4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B7BB841C8FF8A10079BF4C /* LaunchScreen.storyboard */; };
+		78C003031CA7E291003C5903 /* AASMSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C003021CA7E291003C5903 /* AASMSManager.m */; };
+		78C003081CA7E37C003C5903 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C003061CA7E37C003C5903 /* MOBFoundation.framework */; };
+		78C003091CA7E37C003C5903 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C003071CA7E37C003C5903 /* SMS_SDK.framework */; };
+		78C0030B1CA7E3E1003C5903 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C0030A1CA7E3E1003C5903 /* MessageUI.framework */; };
+		78C0030D1CA7E3ED003C5903 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C0030C1CA7E3ED003C5903 /* libz.tbd */; };
+		78C0030F1CA7E3FF003C5903 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C0030E1CA7E3FF003C5903 /* libicucore.tbd */; };
+		78C003111CA7E410003C5903 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C003101CA7E410003C5903 /* JavaScriptCore.framework */; };
+		78C003131CA7E41E003C5903 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C003121CA7E41E003C5903 /* libstdc++.tbd */; };
 		DBC3D7E569DCEE9BC7002101 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F461760084066BD88E48E9F2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +59,15 @@
 		78B7BB821C8FF8A10079BF4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78B7BB851C8FF8A10079BF4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78B7BB871C8FF8A10079BF4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C003011CA7E291003C5903 /* AASMSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASMSManager.h; sourceTree = "<group>"; };
+		78C003021CA7E291003C5903 /* AASMSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASMSManager.m; sourceTree = "<group>"; };
+		78C003061CA7E37C003C5903 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		78C003071CA7E37C003C5903 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		78C0030A1CA7E3E1003C5903 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		78C0030C1CA7E3ED003C5903 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		78C0030E1CA7E3FF003C5903 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		78C003101CA7E410003C5903 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		78C003121CA7E41E003C5903 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		F461760084066BD88E48E9F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7DE08325962CF0A178EDAC5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +77,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78C003131CA7E41E003C5903 /* libstdc++.tbd in Frameworks */,
+				78C0030F1CA7E3FF003C5903 /* libicucore.tbd in Frameworks */,
+				78C0030D1CA7E3ED003C5903 /* libz.tbd in Frameworks */,
+				78C0030B1CA7E3E1003C5903 /* MessageUI.framework in Frameworks */,
+				78C003111CA7E410003C5903 /* JavaScriptCore.framework in Frameworks */,
+				78C003091CA7E37C003C5903 /* SMS_SDK.framework in Frameworks */,
+				78C003081CA7E37C003C5903 /* MOBFoundation.framework in Frameworks */,
 				DBC3D7E569DCEE9BC7002101 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +121,8 @@
 			children = (
 				786A369A1C9EC11800FB2032 /* AAProfileManager.h */,
 				786A369B1C9EC11800FB2032 /* AAProfileManager.m */,
+				78C003011CA7E291003C5903 /* AASMSManager.h */,
+				78C003021CA7E291003C5903 /* AASMSManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -138,6 +164,7 @@
 		78B7BB751C8FF8A10079BF4C /* AASpreader */ = {
 			isa = PBXGroup;
 			children = (
+				78C003041CA7E37C003C5903 /* ThirdParty */,
 				7864703F1C93E27D00D7A108 /* Networking */,
 				78AF40741C917DBF0071250A /* Controllers */,
 				78AF40751C917DBF0071250A /* Managers */,
@@ -165,6 +192,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		78C003041CA7E37C003C5903 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				78C003051CA7E37C003C5903 /* SMS_SDK */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		78C003051CA7E37C003C5903 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				78C003061CA7E37C003C5903 /* MOBFoundation.framework */,
+				78C003071CA7E37C003C5903 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
 		A7A5E2440ED1CECEE83DA4B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +221,11 @@
 		C8512D719A1FA78C895BF8C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78C003121CA7E41E003C5903 /* libstdc++.tbd */,
+				78C003101CA7E410003C5903 /* JavaScriptCore.framework */,
+				78C0030E1CA7E3FF003C5903 /* libicucore.tbd */,
+				78C0030C1CA7E3ED003C5903 /* libz.tbd */,
+				78C0030A1CA7E3E1003C5903 /* MessageUI.framework */,
 				F461760084066BD88E48E9F2 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -306,6 +355,7 @@
 				7864703B1C93D5F700D7A108 /* AALoginViewController.m in Sources */,
 				786A36921C9E5F5700FB2032 /* AAMeViewController.m in Sources */,
 				7864703E1C93D60600D7A108 /* AARegisterViewController.m in Sources */,
+				78C003031CA7E291003C5903 /* AASMSManager.m in Sources */,
 				78B7BB7E1C8FF8A10079BF4C /* ViewController.m in Sources */,
 				7864705E1C93ECB900D7A108 /* AARequest.m in Sources */,
 				786A36951C9E639A00FB2032 /* AABaseViewController.m in Sources */,
@@ -425,6 +475,10 @@
 			baseConfigurationReference = 78B3F57C72D78CD90FFFF4D9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AASpreader/ThirdParty/SMS_SDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AASpreader/AASpreader-prefix.pch";
 				INFOPLIST_FILE = AASpreader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -438,6 +492,10 @@
 			baseConfigurationReference = F7DE08325962CF0A178EDAC5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AASpreader/ThirdParty/SMS_SDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/AASpreader/AASpreader-prefix.pch";
 				INFOPLIST_FILE = AASpreader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

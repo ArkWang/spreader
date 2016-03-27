@@ -18,3 +18,14 @@ static NSString *const kAAUserDidChangeNotification = @"kAAUserDidChangeNotifica
 + (instancetype)sharedProfileManager;
 
 @end
+
+
+@interface AAProfileManager(Verify)
+
++ (NSString *)checkMobile:(NSString *)mobile;
+
++ (NSString *)checkPassword:(NSString *)password;
+
++ (NSString *)encodedPassword:(NSString *)password;
+
+@end

@@ -12,6 +12,11 @@
 
 @property (nonatomic, assign) NSUInteger requestId;
 
+@property (nonatomic, weak) IBOutlet UITextField *mobileTextField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
+
+@property (nonatomic, weak) IBOutlet UIButton *loginButton;
+
 @end
 
 @implementation AALoginViewController
@@ -26,6 +31,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.mobileTextField becomeFirstResponder];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -36,46 +47,39 @@
 }
 */
 
-- (IBAction)cancelButtonClicked:(UIButton *)sender
+- (IBAction)dismissSelf:(id)sender
 {
     // dismiss keyboard
     [self dismissKeyboard];
     // dismiss self or pop
-    if (self.presentingViewController) {
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    } else {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+    [super dismissSelf:sender];
 }
 
 - (IBAction)loginButtonClicked:(UIButton *)sender
 {
+    [self dismissKeyboard];
     // get input
-    NSDictionary *inputDict = @{@"mobile": @"18100001111", @"password": @"123456"};
+    NSString *mobile = self.mobileTextField.text;
+    NSString *password = self.passwordTextField.text;
+    NSDictionary *inputDict = @{@"mobile": mobile ? mobile : @"", @"password": password ? password : @""};
     // check input
     BOOL validInput = [self checkInput:inputDict];
     if (validInput) {
         // build request
         [self requestLogin:inputDict];
     }
-    
-}
-
-- (void)dismissKeyboard
-{
-    [self setEditing:NO];
 }
 
 - (BOOL)checkInput:(NSDictionary *)inputDict
 {
     NSString *mobile = inputDict[@"mobile"];
     NSString *password = inputDict[@"password"];
-    NSString *errorMsg = [self checkMobile:mobile];
+    NSString *errorMsg = [AAProfileManager checkMobile:mobile];
     if (errorMsg) {
         NSLog(@"LOGIN ERROR : %@", errorMsg);
         return NO;
     }
-    errorMsg = [self checkPassword:password];
+    errorMsg = [AAProfileManager checkPassword:password];
     if (errorMsg) {
         NSLog(@"LOGIN ERROR : %@", errorMsg);
         return NO;
@@ -83,30 +87,13 @@
     return YES;
 }
 
-- (NSString *)checkMobile:(NSString *)mobile
-{
-    if (mobile.length <= 0) {
-        return @"手机号不能为空";
-    }
-    return nil;
-}
-
-- (NSString *)checkPassword:(NSString *)password
-{
-    if (password.length <= 0) {
-        return @"密码不能为空";
-    } else if (password.length < 6) {
-        return @"密码至少为6位";
-    }
-    return nil;
-}
-
 - (void)requestLogin:(NSDictionary *)inputDict
 {
     if (self.requestId > 0) {
         return;
     }
-    NSDictionary *params = @{@"mobile": inputDict[@"mobile"], @"password": inputDict[@"password"]};
+    NSString *encodedPwd = [AAProfileManager encodedPassword:inputDict[@"password"]];
+    NSDictionary *params = @{@"mobile": inputDict[@"mobile"], @"password": encodedPwd};
     __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask *loginTask = [[AARequest sharedInstance] get:kAARequestUserLogin parameters:params completion:^(id result, NSError *error) {
         weakSelf.requestId = 0;
@@ -116,7 +103,7 @@
                 user.mobile = params[@"mobile"];
                 [AAProfileManager sharedProfileManager].currentUser = user;
                 // pop or dismiss
-                [weakSelf cancelButtonClicked:nil];
+                [weakSelf dismissSelf:nil];
             }
         } else {
             NSLog(@"LOGIN ERROR : %@", error);
